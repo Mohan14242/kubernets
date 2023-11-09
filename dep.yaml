@@ -15,10 +15,10 @@ spec:
     metadata:
       labels:
         env: dev1
-        app: frontend1
+        app: frontend
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: nginx:1.14.2
       
       
