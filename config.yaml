@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Configmap 
+metadata: 
+  name: Configmap
+data:
+  course: devops
+  student: mohan
