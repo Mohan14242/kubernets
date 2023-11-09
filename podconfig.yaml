@@ -10,10 +10,10 @@ spec:
     - name: course
       valuefrom:
         ConfigMapKeyRef:
-          name: config
+          name: confi
           key: course
     - name: student
       valuefrom: 
         ConfigMapKeyRef:
-          name: config
+          name: confi
           key: student
