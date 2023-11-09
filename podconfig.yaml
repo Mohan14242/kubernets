@@ -9,11 +9,11 @@ spec:
     env:
     - name: course
       valueFrom:
-        ConfigMapKeyRef:
+        configMapKeyRef:
           name: confi
           key: course
     - name: student
-      valueFrom: 
-        ConfigMapKeyRef:
+      valueFrom:
+        configMapKeyRef:
           name: confi
           key: student
