@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: fronn1
   labels: 
     env: dev
     app: frontend
@@ -9,13 +9,13 @@ spec:
   replicas: 3
   selector: 
     matchLabels:
-      env: dev
-      app: frontend
+      env: dev1
+      app: frontend1
   template:
     metadata:
       labels:
-        env: dev
-        app: frontend
+        env: dev1
+        app: frontend1
     spec:
       containers:
       - name: nginx
