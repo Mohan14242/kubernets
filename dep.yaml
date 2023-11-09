@@ -15,7 +15,7 @@ spec:
     metadata:
       labels:
         env: dev1
-        app: frontend
+        app: frontend1
     spec:
       containers:
       - name: nginx
