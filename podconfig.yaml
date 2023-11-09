@@ -6,14 +6,6 @@ spec:
   containers:
   - name: pod-config
     image: nginx
-    env:
-    - name: course
-      valueFrom:
-        configMapKeyRef:
-          name: confi
-          key: course
-    - name: student
-      valueFrom:
-        configMapKeyRef:
-          name: confi
-          key: student
+    envFrom:
+    - ConfigMapRef: 
+        name: confi
