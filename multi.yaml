@@ -8,7 +8,6 @@ spec:
     image: nginx:latest
     env: 
     - name: mohan
-      value: 25
+      value: "25"
     - name: vijay
-      value: 30
-    
+      value: "30"
