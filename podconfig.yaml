@@ -8,12 +8,12 @@ spec:
     image: nginx
     env:
     - name: course
-      valuefrom:
+      valueFrom:
         ConfigMapKeyRef:
           name: confi
           key: course
     - name: student
-      valuefrom: 
+      valueFrom: 
         ConfigMapKeyRef:
           name: confi
           key: student
