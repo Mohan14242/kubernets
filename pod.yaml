@@ -8,4 +8,4 @@ spec:
   - name: nginx-simple
     image: nginx:1.14.2
     ports:
-    - conatinerport: 80
+    - containerport: 80
