@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap 
 metadata: 
-  name: ConfigMap
+  name: Confi
 data:
   course: devops
   student: mohan
