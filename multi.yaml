@@ -5,6 +5,8 @@ metadata:
   labels:
     environment: production
     app: nginx
+    name.chi: mohan
+  
 
 spec:
   containers:
