@@ -3,44 +3,40 @@ kind: Deployment
 metadata:
   name: mongodb
   namespace: roboshop
-  labels:
-    env: dev
+  labels: # these labels belong to deployment
     app: mongodb
     tier: db
+    project: roboshop
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      env: dev
+    matchLabels: # these labels should match with pod
       app: mongodb
       tier: db
-  template:
+      project: roboshop
+  template: # this is the pod definition
     metadata:
       labels:
-        env: dev
         app: mongodb
         tier: db
+        project: roboshop
     spec:
       containers:
       - name: mongodb
-        image: mohan1424/mongodb:1.0.0
+        image: joindevops/mongodb:1.0.0
 ---
-apiVersion: v1 
+apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: mongodb
   namespace: roboshop
 spec:
   selector:
-    env: dev
-    app: mongodb 
+    app: mongodb
     tier: db
-  ports: 
-    - name: mongodb-port
-      protocol: TCP
-      port: 27017
-      targetPort: 27017
-     
-
-
-    
+    project: roboshop
+  ports:
+  - name: mongodb-port
+    protocol: TCP
+    port: 27017 # this port belongs to service
+    targetPort: 27017 # this port belongs to container
