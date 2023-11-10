@@ -1,8 +1,7 @@
-# First Deployment (apps/v1)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongodb-dev
+  name: mongodb
   labels:
     env: dev
     app: mongodb
@@ -24,22 +23,22 @@ spec:
       containers:
       - name: mongodb
         image: mohan1424/mongodb:1.0.0
-
 ---
-
-# Second Deployment (v1)
 apiVersion: v1 
 kind: Deployment
 metadata: 
-  name: mongodb-prod
+  name: roboshop
 spec:
   selector:
-    matchLabels:
-      env: prod
-      app: mongodb 
-      tier: db
+    env: dev
+    app: mongodb 
+    tier: db
   ports: 
     - name: mongodb-port
       protocol: TCP
       port: 27017
       targetPort: 27017
+     
+
+
+    
