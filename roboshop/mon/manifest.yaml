@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
+  Namespace: roboshop
   labels:
     env: dev
     app: mongodb
@@ -27,7 +28,8 @@ spec:
 apiVersion: v1 
 kind: Service
 metadata: 
-  name: roboshop
+  name: mongodb
+  Namespace: roboshop
 spec:
   selector:
     env: dev
