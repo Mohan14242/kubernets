@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+  labels:
+    env: dev
+    app: mongodb
+    tier: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      env: dev
+      app: mongodb
+      tier: db
+  template:
+    metadata:
+      labels:
+        env: dev
+        app: mongodb
+        tier: db
+  spec:
+    containers:
+    - name: mongodb
+      image: mohan1424/mongodb:1.0.0
+     
+
+
+    
